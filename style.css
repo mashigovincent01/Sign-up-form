@@ -1,6 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap');
+
 *{
     margin: 0;
     box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+}
+
+label{
+    font-size: 15px;
+}
+a{
+    text-decoration: none;
 }
 
 main{
@@ -12,7 +22,7 @@ main{
 
 section{
     padding: 40px;
-    background-color: white;
+    background-color: #DCF2F1;
 }
 
 form{
@@ -45,7 +55,7 @@ input:invalid{
     border-color: red;
 }
 .header{
-    color: white;
+    color: #160909;
     background-color: lightgrey;
     padding: 20px;
 }
@@ -64,6 +74,18 @@ input{
     width: 100%;
     justify-content: center;
 }
+
+button{
+    background-color: #424769;
+    border-color: #424769;
+    color: snow;
+    padding: 6px;
+    width: 200px;
+    font-size: 20px;
+    border-radius: 15px;
+    margin-top: 20px;
+}
+
 h2{
     margin-top: 30px;
 }
@@ -87,7 +109,21 @@ aside{
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-wrap: wrap;
+    padding-bottom: 30px;
+}
+footer{
+    align-self: flex-end;
 }
 body{
-    min-width: 700px;
+    min-width: 00px;
 }
+
+button{
+    margin-bottom: 20px;
+}
+
+.header{
+    opacity: 0.7;
+}
+

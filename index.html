@@ -13,6 +13,7 @@
                 <img src="images/think.jpg" alt="">
                 <h1>WeThinkAndWork</h1>
             </div>
+            <footer>by Mashigo Vincent <a href="https://github.com/mashigovincent01" target="_blank"> <img style="margin-bottom:  -10px; margin-left: 10px;" src="https://github.githubassets.com/assets/GitHub-Mark-ea2971cee799.png" alt=""> </a> </footer>
         </aside>
         <section>
             <p>This is not a real online service! You know you need
@@ -43,16 +44,40 @@
 
                 <div class="input">
                     <label for="password" >Password</label>
-                    <input type="password" name="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" id="password" required>
+                    <input type="password" class="error" name="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" id="password" required>
                 </div>
                 <div class="input">
                     <label for="confirm-password">Confirm Password</label>
-                    <input type="password" name="confirmPassword" id="confirm-password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required>
+                    <input type="password" class="error" name="confirmPassword" id="confirm-password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required>
                 </div>
 
                 
             </form>
+            <button type="submit">Create Account</button>
+            <p>Already have an account? <a href="#">Log in</a></p>
         </section>
     </main>
+
+    <script>
+        const passwords = document.getElementsByClassName("error");
+        for(let i = 0; i < passwords.length; i++){
+            passwords[i].addEventListener("focus", ()=>{
+                if(validate()){
+                    alert("match");
+                }
+                else{
+                }
+            });
+        }
+
+        function validate(){
+            let valid = false;
+            let password = passwords[0].value;
+            let confirmPassword = passwords[1].value;
+            //  alert(password + "\n" + confirmPassword);
+            if(password === confirmPassword && password !== "" && confirmPassword !== "") return true;
+            return valid;
+        }
+    </script>
 </body>
 </html>
